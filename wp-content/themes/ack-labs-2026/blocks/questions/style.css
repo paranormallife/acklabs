@@ -1,0 +1,14 @@
+/**
+ * acklabs/questions — Frontend & Editor styles
+ * Core styles live in the theme's style.css.
+ * This file adds block-specific editor polish.
+ */
+
+/* Editor-only: keep accordion items readable in editor (no collapse) */
+.questions-editor-wrap .question-body {
+	max-height: none !important;
+}
+
+.questions-editor-wrap .question::before {
+	transform: scaleY(1) !important;
+}

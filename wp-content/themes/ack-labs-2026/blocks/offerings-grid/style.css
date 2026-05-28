@@ -1,0 +1,9 @@
+/**
+ * acklabs/offerings-grid — Frontend & Editor styles
+ * Core styles live in the theme's style.css.
+ */
+
+/* Editor preview: treat all cards as visual divs (not links) */
+.offerings-section-editor .offering-card {
+	cursor: default;
+}

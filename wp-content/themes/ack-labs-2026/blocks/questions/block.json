@@ -1,0 +1,25 @@
+{
+	"apiVersion": 2,
+	"name": "acklabs/questions",
+	"title": "Questions (Accordion)",
+	"description": "Collapsible FAQ-style accordion block with repeater fields.",
+	"category": "widgets",
+	"icon": "editor-ul",
+	"textdomain": "acklabs",
+	"editorScript": "file:./index.js",
+	"viewScript": "file:./view.js",
+	"style": "file:./style.css",
+	"attributes": {
+		"items": {
+			"type": "array",
+			"default": [],
+			"items": {
+				"type": "object"
+			}
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"]
+	}
+}

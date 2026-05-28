@@ -1,0 +1,9 @@
+/**
+ * acklabs/clients-carousel — Frontend & Editor styles
+ * Core styles live in the theme's style.css.
+ */
+
+/* Pause animation in the editor */
+.clients-carousel-editor .carousel-track {
+	animation-play-state: paused !important;
+}

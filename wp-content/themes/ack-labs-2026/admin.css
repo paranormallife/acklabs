@@ -1,0 +1,114 @@
+/*
+ * Ack Labs 2026 — Admin & Block Editor Styles
+ * Mirrors frontend design tokens so the editor matches the live site.
+ */
+
+/* ─── Design Tokens ─────────────────────────────────────────────────────── */
+:root {
+	--navy:        #0f1f38;
+	--slate:       #1c3254;
+	--amber:       #e8a045;
+	--amber-light: #f2c07a;
+	--cream:       #f8f4ee;
+	--muted:       #7a8fa6;
+	--border:      rgba(255,255,255,0.08);
+	--card-bg:     rgba(255,255,255,0.03);
+}
+
+/* ─── Editor Canvas ─────────────────────────────────────────────────────── */
+.editor-styles-wrapper {
+	background: #0f1f38 !important;
+	color: #f8f4ee;
+	font-family: 'DM Sans', sans-serif;
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 1.8;
+}
+
+/* Override editor max-width so content isn't cramped */
+.editor-styles-wrapper .wp-block,
+.editor-styles-wrapper .block-editor-block-list__layout.is-root-container > * {
+	max-width: 860px !important;
+}
+
+/* ─── Typography ────────────────────────────────────────────────────────── */
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4 {
+	font-family: 'DM Serif Display', serif;
+	font-weight: 400;
+	line-height: 1.15;
+	color: #f8f4ee;
+}
+
+.editor-styles-wrapper h1 { font-size: clamp(32px, 5vw, 56px); }
+.editor-styles-wrapper h2 { font-size: clamp(24px, 3vw, 36px); }
+.editor-styles-wrapper h3 { font-size: clamp(18px, 2.5vw, 24px); }
+.editor-styles-wrapper h4 { font-size: clamp(16px, 2vw, 20px); }
+
+.editor-styles-wrapper h1 em,
+.editor-styles-wrapper h2 em,
+.editor-styles-wrapper h3 em {
+	font-style: italic;
+	color: #f2c07a;
+}
+
+.editor-styles-wrapper p { color: #7a8fa6; }
+.editor-styles-wrapper p strong { color: #f8f4ee; font-weight: 400; }
+
+.editor-styles-wrapper a { color: #e8a045; }
+
+/* ─── Lists ─────────────────────────────────────────────────────────────── */
+.editor-styles-wrapper ul,
+.editor-styles-wrapper ol {
+	color: #7a8fa6;
+	padding-left: 20px;
+}
+
+.editor-styles-wrapper li { margin-bottom: 8px; line-height: 1.7; }
+
+/* ─── Blockquote ────────────────────────────────────────────────────────── */
+.editor-styles-wrapper blockquote,
+.editor-styles-wrapper .wp-block-quote {
+	border-left: 3px solid #e8a045;
+	padding: 16px 24px;
+	margin: 24px 0;
+	background: rgba(232,160,69,0.04);
+	border-radius: 0 8px 8px 0;
+	font-family: 'DM Serif Display', serif;
+	font-style: italic;
+	color: #f8f4ee;
+}
+
+/* ─── Buttons ───────────────────────────────────────────────────────────── */
+.editor-styles-wrapper .wp-block-button__link {
+	background: #e8a045;
+	color: #0f1f38;
+	font-family: 'DM Sans', sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: 0.04em;
+	padding: 14px 32px;
+	border-radius: 8px;
+}
+
+/* ─── Separator / HR ────────────────────────────────────────────────────── */
+.editor-styles-wrapper hr,
+.editor-styles-wrapper .wp-block-separator {
+	border: none;
+	border-top: 1px solid rgba(255,255,255,0.08);
+	margin: 64px 0;
+}
+
+/* ─── Images ────────────────────────────────────────────────────────────── */
+.editor-styles-wrapper figure { margin: 24px 0; }
+.editor-styles-wrapper figcaption { font-size: 12px; color: #7a8fa6; text-align: center; margin-top: 8px; }
+
+/* ─── Block Editor UI hints ─────────────────────────────────────────────── */
+.editor-styles-wrapper .wp-block-group {
+	background: rgba(255,255,255,0.03);
+	border: 1px solid rgba(255,255,255,0.08);
+	border-radius: 14px;
+	padding: 32px 28px;
+}

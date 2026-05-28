@@ -1,0 +1,24 @@
+{
+	"apiVersion": 2,
+	"name": "acklabs/stats-row",
+	"title": "Stats Row",
+	"description": "A horizontal row of statistics with large numbers and labels.",
+	"category": "widgets",
+	"icon": "chart-bar",
+	"textdomain": "acklabs",
+	"editorScript": "file:./index.js",
+	"style": "file:./style.css",
+	"attributes": {
+		"items": {
+			"type": "array",
+			"default": [],
+			"items": {
+				"type": "object"
+			}
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"]
+	}
+}

@@ -1,0 +1,24 @@
+{
+	"apiVersion": 2,
+	"name": "acklabs/offerings-grid",
+	"title": "Offerings Grid",
+	"description": "A grid of offering cards with step label, title, description and optional link.",
+	"category": "widgets",
+	"icon": "grid-view",
+	"textdomain": "acklabs",
+	"editorScript": "file:./index.js",
+	"style": "file:./style.css",
+	"attributes": {
+		"items": {
+			"type": "array",
+			"default": [],
+			"items": {
+				"type": "object"
+			}
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"]
+	}
+}

@@ -1,0 +1,12 @@
+#ignore everything except custom themes:
+/*
+!wp-content/
+wp-content/index.php
+wp-content/uploads/
+wp-content/themes/index.php
+wp-content/themes/twenty*
+wp-content/plugins/
+wp-content/mu-plugins/
+!.gitignore
+*.DS_Store
+._*

@@ -1,0 +1,9 @@
+/**
+ * acklabs/stats-row — Frontend & Editor styles
+ * Core styles live in the theme's style.css.
+ */
+
+/* Ensure stats row renders in a readable single-column in the editor */
+.stats-row-editor .stats-row {
+	grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
