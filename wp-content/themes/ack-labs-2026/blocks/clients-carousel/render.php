@@ -45,4 +45,4 @@ ob_start();
 
 </div>
 <?php
-return ob_get_clean();
+echo ob_get_clean();
