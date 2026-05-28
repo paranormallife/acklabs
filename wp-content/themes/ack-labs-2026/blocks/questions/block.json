@@ -6,6 +6,7 @@
 	"category": "widgets",
 	"icon": "editor-ul",
 	"textdomain": "acklabs",
+	"render": "file:./render.php",
 	"editorScript": "file:./index.js",
 	"viewScript": "file:./view.js",
 	"style": "file:./style.css",

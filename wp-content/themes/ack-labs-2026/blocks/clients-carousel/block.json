@@ -6,6 +6,7 @@
 	"category": "widgets",
 	"icon": "images-alt2",
 	"textdomain": "acklabs",
+	"render": "file:./render.php",
 	"editorScript": "file:./index.js",
 	"style": "file:./style.css",
 	"attributes": {

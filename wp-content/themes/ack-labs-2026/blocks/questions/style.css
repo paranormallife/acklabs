@@ -1,14 +1,113 @@
 /**
- * acklabs/questions — Frontend & Editor styles
- * Core styles live in the theme's style.css.
- * This file adds block-specific editor polish.
+ * acklabs/questions — Block styles (frontend + editor)
+ * Loaded by WordPress on any page containing this block,
+ * and injected into the block editor automatically.
  */
 
-/* Editor-only: keep accordion items readable in editor (no collapse) */
-.questions-editor-wrap .question-body {
-	max-height: none !important;
+/* Design tokens (mirrored from theme style.css for editor context) */
+.questions,
+.questions * {
+	--navy:        #0f1f38;
+	--slate:       #1c3254;
+	--amber:       #e8a045;
+	--amber-light: #f2c07a;
+	--cream:       #f8f4ee;
+	--muted:       #7a8fa6;
+	--border:      rgba(255,255,255,0.08);
 }
 
-.questions-editor-wrap .question::before {
-	transform: scaleY(1) !important;
+.questions {
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+	margin-bottom: 56px;
+}
+
+.question {
+	border-bottom: 1px solid var(--border);
+	position: relative;
+	padding-left: 20px;
+	cursor: pointer;
+}
+
+.question:first-child { border-top: 1px solid var(--border); }
+
+.question::before {
+	content: '';
+	position: absolute;
+	left: 0; top: 0; bottom: 0;
+	width: 3px;
+	background: var(--amber);
+	border-radius: 2px;
+	transform: scaleY(0);
+	transition: transform 0.3s ease;
+	transform-origin: top;
+}
+
+.question.open::before,
+.question:hover::before { transform: scaleY(1); }
+
+.question-trigger {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 22px 0;
+	gap: 16px;
+}
+
+.question-left { flex: 1; }
+
+.dim-label {
+	display: block;
+	font-size: 10px;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: var(--amber);
+	opacity: 0.7;
+	margin-bottom: 6px;
+}
+
+.question-text {
+	font-size: clamp(16px, 2.2vw, 20px);
+	line-height: 1.5;
+	color: var(--muted);
+	transition: color 0.2s;
+}
+
+.question.open .question-text,
+.question:hover .question-text { color: var(--cream); }
+
+.question-chevron {
+	flex-shrink: 0;
+	width: 20px;
+	height: 20px;
+	color: var(--amber);
+	opacity: 0.5;
+	transition: transform 0.3s ease, opacity 0.2s;
+}
+
+.question.open .question-chevron { transform: rotate(180deg); opacity: 1; }
+.question:hover .question-chevron { opacity: 0.8; }
+
+.question-body {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.question.open .question-body { max-height: 400px; }
+
+.question-expand {
+	padding: 0 0 22px;
+	font-size: 14px;
+	color: var(--muted);
+	line-height: 1.7;
+}
+
+/* In the editor, show all items expanded so content is visible */
+.block-editor-block-list__block .question-body {
+	max-height: 400px !important;
+}
+.block-editor-block-list__block .question::before {
+	transform: scaleY(1);
 }
