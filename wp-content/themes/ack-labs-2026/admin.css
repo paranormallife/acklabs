@@ -3,7 +3,7 @@
  * Mirrors frontend design tokens so the editor matches the live site.
  */
 
-/* ─── Design Tokens ─────────────────────────────────────────────────────── */
+/* --- Design Tokens ------------------------------------------------------- */
 :root {
 	--navy:        #0f1f38;
 	--slate:       #1c3254;
@@ -15,7 +15,7 @@
 	--card-bg:     rgba(255,255,255,0.03);
 }
 
-/* ─── Editor Canvas ─────────────────────────────────────────────────────── */
+/* --- Editor Canvas ------------------------------------------------------- */
 .editor-styles-wrapper {
 	background: #0f1f38 !important;
 	color: #f8f4ee;
@@ -31,7 +31,7 @@
 	max-width: 860px !important;
 }
 
-/* ─── Typography ────────────────────────────────────────────────────────── */
+/* --- Typography ---------------------------------------------------------- */
 .editor-styles-wrapper h1,
 .editor-styles-wrapper h2,
 .editor-styles-wrapper h3,
@@ -59,7 +59,7 @@
 
 .editor-styles-wrapper a { color: #e8a045; }
 
-/* ─── Lists ─────────────────────────────────────────────────────────────── */
+/* --- Lists --------------------------------------------------------------- */
 .editor-styles-wrapper ul,
 .editor-styles-wrapper ol {
 	color: #7a8fa6;
@@ -68,7 +68,7 @@
 
 .editor-styles-wrapper li { margin-bottom: 8px; line-height: 1.7; }
 
-/* ─── Blockquote ────────────────────────────────────────────────────────── */
+/* --- Blockquote ---------------------------------------------------------- */
 .editor-styles-wrapper blockquote,
 .editor-styles-wrapper .wp-block-quote {
 	border-left: 3px solid #e8a045;
@@ -81,7 +81,7 @@
 	color: #f8f4ee;
 }
 
-/* ─── Buttons ───────────────────────────────────────────────────────────── */
+/* --- Buttons ------------------------------------------------------------- */
 .editor-styles-wrapper .wp-block-button__link {
 	background: #e8a045;
 	color: #0f1f38;
@@ -93,7 +93,7 @@
 	border-radius: 8px;
 }
 
-/* ─── Separator / HR ────────────────────────────────────────────────────── */
+/* --- Separator / HR ------------------------------------------------------ */
 .editor-styles-wrapper hr,
 .editor-styles-wrapper .wp-block-separator {
 	border: none;
@@ -101,17 +101,11 @@
 	margin: 64px 0;
 }
 
-/* ─── Images ────────────────────────────────────────────────────────────── */
+/* --- Images -------------------------------------------------------------- */
 .editor-styles-wrapper figure { margin: 24px 0; }
 .editor-styles-wrapper figcaption { font-size: 12px; color: #7a8fa6; text-align: center; margin-top: 8px; }
 
-/* ─── Block Editor UI hints ─────────────────────────────────────────────── */
-.editor-styles-wrapper .wp-block-group {
-	background: rgba(255,255,255,0.03);
-	border: 1px solid rgba(255,255,255,0.08);
-	border-radius: 14px;
-	padding: 32px 28px;
-}
+
 
 .eyebrow {
   font-size: 11px;
@@ -121,4 +115,41 @@
   margin-bottom: 28px;
   opacity: 0;
   animation: fadeUp 0.6s 0.1s ease forwards;
+}
+
+.bridge {
+  opacity: 0;
+  animation: fadeUp 0.6s 0.6s ease forwards;
+  margin-bottom: 60px;
+}
+
+.bridge-text {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-style: italic;
+  color: var(--cream);
+  margin-bottom: 6px;
+}
+
+.bridge-sub {
+  font-size: 14px;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
+.bridge-arrow {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--amber);
+  border-bottom: 1px solid rgba(232,160,69,0.3);
+  padding-bottom: 2px;
+  transition: all 0.2s;
+}
+
+.bridge-arrow:hover {
+  border-bottom-color: var(--amber);
+  letter-spacing: 0.12em;
 }
