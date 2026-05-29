@@ -113,13 +113,9 @@
   text-transform: uppercase;
   color: var(--amber);
   margin-bottom: 28px;
-  opacity: 0;
-  animation: fadeUp 0.6s 0.1s ease forwards;
 }
 
 .bridge {
-  opacity: 0;
-  animation: fadeUp 0.6s 0.6s ease forwards;
   margin-bottom: 60px;
 }
 
