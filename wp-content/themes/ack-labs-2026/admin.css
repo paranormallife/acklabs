@@ -133,7 +133,11 @@
   letter-spacing: 0.02em;
 }
 
-.bridge-arrow {
+.bridge-arrow,
+.wp-block-button .wp-block-button__link {
+  background: transparent;
+  border-radius: 0;
+  outline: 0;
   display: inline-block;
   margin-top: 16px;
   font-size: 13px;
@@ -141,11 +145,20 @@
   text-transform: uppercase;
   color: var(--amber);
   border-bottom: 1px solid rgba(232,160,69,0.3);
-  padding-bottom: 2px;
+  padding: 0 0 2px 0;
   transition: all 0.2s;
 }
 
-.bridge-arrow:hover {
+.bridge-arrow:hover,
+.wp-block-button .wp-block-button__link:hover {
   border-bottom-color: var(--amber);
   letter-spacing: 0.12em;
+}
+
+.wp-block-button .wp-block-button__link::after {
+  content: '\2192';
+  font-size: 16px;
+  color: var(--amber);
+  margin-left: 6px;
+  transition: transform 0.3s ease;
 }
