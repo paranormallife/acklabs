@@ -203,7 +203,7 @@ require get_template_directory() . '/customizations/customizer.php';
 // ─────────────────────────────────────────────────────────────────────────────
 
 function acklabs_register_blocks() {
-	$blocks = [ 'questions', 'offerings-grid', 'clients-carousel', 'stats-row' ];
+	$blocks = [ 'eyebrow', 'questions', 'offerings-grid', 'clients-carousel', 'stats-row' ];
 	foreach ( $blocks as $block ) {
 		$block_path = get_template_directory() . '/blocks/' . $block;
 		if ( file_exists( $block_path . '/block.json' ) ) {

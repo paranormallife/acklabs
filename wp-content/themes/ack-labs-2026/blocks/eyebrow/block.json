@@ -1,0 +1,22 @@
+{
+	"apiVersion": 2,
+	"name": "acklabs/eyebrow",
+	"title": "Eyebrow",
+	"description": "Outputs text inside a <div class=\"eyebrow\"> element.",
+	"category": "text",
+	"icon": "minus",
+	"textdomain": "acklabs",
+	"render": "file:./render.php",
+	"editorScript": "file:./index.js",
+	"style": "file:./style.css",
+	"attributes": {
+		"text": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": false
+	}
+}

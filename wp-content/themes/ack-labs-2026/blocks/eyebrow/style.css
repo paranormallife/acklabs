@@ -1,0 +1,11 @@
+/**
+ * acklabs/eyebrow — Block styles (frontend + editor)
+ */
+
+.eyebrow {
+	font-size: 11px;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: #e8a045; /* --amber */
+	margin-bottom: 28px;
+}
