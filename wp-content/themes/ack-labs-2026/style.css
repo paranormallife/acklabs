@@ -8,9 +8,9 @@ Version: 1.0.0
 Text Domain: acklabs
 */
 
-/* ─────────────────────────────────────────
+/* -----------------------------------------
    1. DESIGN TOKENS
-───────────────────────────────────────── */
+----------------------------------------- */
 :root {
   --navy:        #0f1f38;
   --slate:       #1c3254;
@@ -29,9 +29,9 @@ Text Domain: acklabs
   --nav-height:  70px;
 }
 
-/* ─────────────────────────────────────────
+/* -----------------------------------------
    2. RESET & BASE
-───────────────────────────────────────── */
+----------------------------------------- */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -54,9 +54,9 @@ body {
 
 img { max-width: 100%; height: auto; }
 
-/* ─────────────────────────────────────────
+/* -----------------------------------------
    3. TYPOGRAPHY
-───────────────────────────────────────── */
+----------------------------------------- */
 h1, h2, h3, h4 {
   color: var(--cream);
   font-family: 'DM Serif Display', serif;
@@ -81,9 +81,9 @@ p strong { color: var(--cream); font-weight: 400; }
 
 a { color: inherit; text-decoration: none; }
 
-/* ─────────────────────────────────────────
+/* -----------------------------------------
    4. NAVIGATION — Mobile-first
-───────────────────────────────────────── */
+----------------------------------------- */
 .site-nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -214,9 +214,9 @@ a { color: inherit; text-decoration: none; }
   transform: rotate(90deg);
 }
 
-/* ─────────────────────────────────────────
+/* -----------------------------------------
    5. PAGE SHELL
-───────────────────────────────────────── */
+----------------------------------------- */
 .page {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -245,9 +245,9 @@ a { color: inherit; text-decoration: none; }
   margin: 64px 0;
 }
 
-/* ─────────────────────────────────────────
+/* -----------------------------------------
    6. HERO
-───────────────────────────────────────── */
+----------------------------------------- */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -292,9 +292,9 @@ a { color: inherit; text-decoration: none; }
 
 .hero-headline em { font-style: italic; color: var(--amber-light); }
 
-/* ─────────────────────────────────────────
+/* -----------------------------------------
    7. ACCORDION (.questions)
-───────────────────────────────────────── */
+----------------------------------------- */
 .questions {
   display: flex;
   flex-direction: column;
@@ -382,9 +382,9 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.7;
 }
 
-/* ─────────────────────────────────────────
+/* -----------------------------------------
    8. BRIDGE
-───────────────────────────────────────── */
+----------------------------------------- */
 .bridge {
   opacity: 0;
   animation: fadeUp 0.6s 0.6s ease forwards;
@@ -405,8 +405,11 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 0.02em;
 }
 
-.bridge-arrow,
+bridge-arrow,
 .wp-block-button .wp-block-button__link {
+  background: transparent;
+  border-radius: 0;
+  outline: 0;
   display: inline-block;
   margin-top: 16px;
   font-size: 13px;
@@ -414,7 +417,7 @@ a { color: inherit; text-decoration: none; }
   text-transform: uppercase;
   color: var(--amber);
   border-bottom: 1px solid rgba(232,160,69,0.3);
-  padding-bottom: 2px;
+  padding: 0 0 2px 0;
   transition: all 0.2s;
 }
 
@@ -432,9 +435,9 @@ a { color: inherit; text-decoration: none; }
   transition: transform 0.3s ease;
 }
 
-/* ─────────────────────────────────────────
+/* -----------------------------------------
    9. LBA SECTION
-───────────────────────────────────────── */
+----------------------------------------- */
 .lba-section {
   background: rgba(255,255,255,0.02);
   border-top: 1px solid var(--border);
@@ -462,9 +465,9 @@ a { color: inherit; text-decoration: none; }
   max-width: 520px;
 }
 
-/* ─────────────────────────────────────────
+/* -----------------------------------------
    10. OFFERINGS GRID
-───────────────────────────────────────── */
+----------------------------------------- */
 .offerings-section {
   padding: 48px 24px;
   max-width: var(--max-width);
@@ -518,9 +521,9 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.6;
 }
 
-/* ─────────────────────────────────────────
+/* -----------------------------------------
    11. CAROUSEL (.clients-section)
-───────────────────────────────────────── */
+----------------------------------------- */
 .clients-section {
   padding: 48px 0;
   border-top: 1px solid var(--border);
@@ -564,9 +567,9 @@ a { color: inherit; text-decoration: none; }
 
 .carousel-logo:hover { opacity: 1; }
 
-/* ─────────────────────────────────────────
+/* -----------------------------------------
    12. STATS ROW
-───────────────────────────────────────── */
+----------------------------------------- */
 .stats-row {
   display: grid;
   grid-template-columns: 1fr;
@@ -601,9 +604,9 @@ a { color: inherit; text-decoration: none; }
   color: var(--muted);
 }
 
-/* ─────────────────────────────────────────
+/* -----------------------------------------
    13. CARDS & SURFACES
-───────────────────────────────────────── */
+----------------------------------------- */
 .card {
   padding: 32px 28px;
   background: var(--card-bg);
@@ -621,9 +624,9 @@ a { color: inherit; text-decoration: none; }
   border-radius: 10px;
 }
 
-/* ─────────────────────────────────────────
+/* -----------------------------------------
    14. BUTTONS & LINKS
-───────────────────────────────────────── */
+----------------------------------------- */
 .btn {
   display: inline-block;
   background: var(--amber);
@@ -658,9 +661,9 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 0.12em;
 }
 
-/* ─────────────────────────────────────────
+/* -----------------------------------------
    15. CTA SECTION
-───────────────────────────────────────── */
+----------------------------------------- */
 .cta-section {
   padding: 80px 24px 20px;
   text-align: center;
@@ -714,9 +717,9 @@ a { color: inherit; text-decoration: none; }
 
 .cta-email:hover { color: var(--cream); }
 
-/* ─────────────────────────────────────────
+/* -----------------------------------------
    16. SITE FOOTER
-───────────────────────────────────────── */
+----------------------------------------- */
 .site-footer {
   border-top: 1px solid var(--border);
   padding: 24px 20px;
@@ -744,9 +747,9 @@ a { color: inherit; text-decoration: none; }
   opacity: 0.6;
 }
 
-/* ─────────────────────────────────────────
+/* -----------------------------------------
    17. PAGE HERO (inner pages)
-───────────────────────────────────────── */
+----------------------------------------- */
 .page-hero { margin-bottom: 56px; }
 
 .page-title {
@@ -768,9 +771,9 @@ a { color: inherit; text-decoration: none; }
 
 .page-intro strong { color: var(--cream); font-weight: 400; }
 
-/* ─────────────────────────────────────────
+/* -----------------------------------------
    18. ABOUT PAGE — Meet Section
-───────────────────────────────────────── */
+----------------------------------------- */
 .meet-section {
   display: grid;
   grid-template-columns: 1fr;
@@ -813,9 +816,9 @@ a { color: inherit; text-decoration: none; }
 
 .bio-block strong { color: var(--cream); font-weight: 400; }
 
-/* ─────────────────────────────────────────
+/* -----------------------------------------
    19. HISTORY SECTION
-───────────────────────────────────────── */
+----------------------------------------- */
 .history-title {
   font-family: 'DM Serif Display', serif;
   font-size: clamp(24px, 3vw, 36px);
@@ -866,9 +869,9 @@ a { color: inherit; text-decoration: none; }
   clear: both;
 }
 
-/* ─────────────────────────────────────────
+/* -----------------------------------------
    20. OFFERINGS PAGE — Steps
-───────────────────────────────────────── */
+----------------------------------------- */
 .triggers-section { margin-bottom: 72px; }
 
 .triggers-label {
@@ -1046,9 +1049,9 @@ a { color: inherit; text-decoration: none; }
   font-size: 11px;
 }
 
-/* ─────────────────────────────────────────
+/* -----------------------------------------
    21. CONTACT FORM
-───────────────────────────────────────── */
+----------------------------------------- */
 .form-row { margin-bottom: 28px; }
 
 .form-row-split {
@@ -1142,9 +1145,9 @@ textarea { resize: vertical; min-height: 140px; line-height: 1.7; }
 
 .submit-btn:hover { background: var(--amber-light); transform: translateY(-1px); }
 
-/* ─────────────────────────────────────────
+/* -----------------------------------------
    22. BLOG
-───────────────────────────────────────── */
+----------------------------------------- */
 .category-bar {
   display: flex;
   align-items: center;
@@ -1212,9 +1215,9 @@ textarea { resize: vertical; min-height: 140px; line-height: 1.7; }
 
 .post-excerpt { font-size: 13px; color: var(--muted); line-height: 1.6; }
 
-/* ─────────────────────────────────────────
+/* -----------------------------------------
    23. ENTRY CONTENT (pages & single posts)
-───────────────────────────────────────── */
+----------------------------------------- */
 .entry-content { font-size: 16px; line-height: 1.8; color: var(--muted); }
 
 .entry-content h2,
@@ -1253,9 +1256,9 @@ textarea { resize: vertical; min-height: 140px; line-height: 1.7; }
 .entry-content figure { margin: 24px 0; }
 .entry-content figcaption { font-size: 12px; color: var(--muted); text-align: center; margin-top: 8px; }
 
-/* ─────────────────────────────────────────
+/* -----------------------------------------
    24. 404 PAGE
-───────────────────────────────────────── */
+----------------------------------------- */
 .not-found-page {
   text-align: center;
   padding: 100px 24px;
@@ -1271,9 +1274,9 @@ textarea { resize: vertical; min-height: 140px; line-height: 1.7; }
   margin-bottom: 24px;
 }
 
-/* ─────────────────────────────────────────
+/* -----------------------------------------
    25. ANIMATIONS
-───────────────────────────────────────── */
+----------------------------------------- */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(16px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -1290,9 +1293,9 @@ textarea { resize: vertical; min-height: 140px; line-height: 1.7; }
 .animate-4 { opacity: 0; animation: fadeUp 0.7s 0.4s ease forwards; }
 .animate-5 { opacity: 0; animation: fadeUp 0.7s 0.5s ease forwards; }
 
-/* ─────────────────────────────────────────
+/* -----------------------------------------
    26. DESKTOP — min-width: 640px
-───────────────────────────────────────── */
+----------------------------------------- */
 @media (min-width: 640px) {
 
   /* Nav */
