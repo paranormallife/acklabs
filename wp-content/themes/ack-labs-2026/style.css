@@ -484,6 +484,10 @@ a { color: inherit; text-decoration: none; }
   overflow: hidden;
 }
 
+.offerings-grid a {
+	border-bottom: 0;
+}
+
 .offering-card {
   display: block;
   text-decoration: none;
