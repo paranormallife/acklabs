@@ -3,6 +3,9 @@
  * Mirrors frontend design tokens so the editor matches the live site.
  */
 
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap');
+
+
 /* --- Design Tokens ------------------------------------------------------- */
 :root {
 	--navy:        #0f1f38;
@@ -13,13 +16,15 @@
 	--muted:       #7a8fa6;
 	--border:      rgba(255,255,255,0.08);
 	--card-bg:     rgba(255,255,255,0.03);
+	--heading:    'DM Serif Display', serif;
+	--body:       'DM Sans', sans-serif;
 }
 
 /* --- Editor Canvas ------------------------------------------------------- */
 .editor-styles-wrapper {
 	background: #0f1f38 !important;
 	color: #f8f4ee;
-	font-family: 'DM Sans', sans-serif;
+	font-family: var(--body);
 	font-weight: 300;
 	font-size: 15px;
 	line-height: 1.8;
@@ -36,7 +41,7 @@
 .editor-styles-wrapper h2,
 .editor-styles-wrapper h3,
 .editor-styles-wrapper h4 {
-	font-family: 'DM Serif Display', serif;
+	font-family: var(--heading);
 	font-weight: 400;
 	line-height: 1.15;
 	color: #f8f4ee;
@@ -76,7 +81,7 @@
 	margin: 24px 0;
 	background: rgba(232,160,69,0.04);
 	border-radius: 0 8px 8px 0;
-	font-family: 'DM Serif Display', serif;
+	font-family: var(--heading);
 	font-style: italic;
 	color: #f8f4ee;
 }
@@ -85,7 +90,7 @@
 .editor-styles-wrapper .wp-block-button__link {
 	background: #e8a045;
 	color: #0f1f38;
-	font-family: 'DM Sans', sans-serif;
+	font-family: var(--body);
 	font-size: 14px;
 	font-weight: 500;
 	letter-spacing: 0.04em;
@@ -120,7 +125,7 @@
 }
 
 .bridge-text {
-  font-family: 'DM Serif Display', serif;
+  font-family: var(--heading);
   font-size: clamp(18px, 2.5vw, 24px);
   font-style: italic;
   color: var(--cream);
@@ -207,7 +212,7 @@
 }
 
 .offering-title {
-  font-family: 'DM Serif Display', serif;
+  font-family: var(--heading);
   font-size: 19px;
   font-weight: 400;
   margin-bottom: 10px;
@@ -225,4 +230,22 @@
 .wp-block-separator {
     margin: 3rem auto;
     border-top: 1px solid var(--border);
+}
+
+.clients-section .carousel-track {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.clients-section .carousel-track img {
+    height: auto;
+    max-width: 150px;
+}
+
+.clients-label {
+    font-family: var(--heading);
+    text-align: center;
+    text-transform: uppercase;
 }
