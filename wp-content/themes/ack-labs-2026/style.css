@@ -86,7 +86,7 @@ p strong { color: var(--cream); font-weight: 400; }
 a { color: inherit; text-decoration: none; }
 
 /* -----------------------------------------
-   4. NAVIGATION — Mobile-first
+   4. NAVIGATION â€” Mobile-first
 ----------------------------------------- */
 .site-nav {
   position: fixed;
@@ -120,7 +120,7 @@ a { color: inherit; text-decoration: none; }
   text-transform: uppercase;
 }
 
-/* Hamburger toggle — visible on mobile */
+/* Hamburger toggle â€” visible on mobile */
 .nav-toggle {
   display: flex;
   flex-direction: column;
@@ -146,7 +146,7 @@ a { color: inherit; text-decoration: none; }
 .site-nav.nav-open .hamburger-bar:nth-child(2) { opacity: 0; }
 .site-nav.nav-open .hamburger-bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* Mobile nav menu — hidden by default, revealed via .nav-open */
+/* Mobile nav menu â€” hidden by default, revealed via .nav-open */
 .nav-links {
   display: none;
   position: absolute;
@@ -206,7 +206,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .nav-links li.menu-item-has-children > a::after {
-  content: '›';
+  content: 'â€º';
   font-size: 16px;
   color: var(--amber);
   opacity: 0.7;
@@ -536,6 +536,9 @@ a { color: inherit; text-decoration: none; }
   padding: 48px 0;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
+  margin-left: 50%;
+  translate: -50% 0;
+  width: 100vw;
 }
 
 .clients-label {
@@ -780,7 +783,7 @@ a { color: inherit; text-decoration: none; }
 .page-intro strong { color: var(--cream); font-weight: 400; }
 
 /* -----------------------------------------
-   18. ABOUT PAGE — Meet Section
+   18. ABOUT PAGE â€” Meet Section
 ----------------------------------------- */
 .meet-section {
   display: grid;
@@ -878,7 +881,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* -----------------------------------------
-   20. OFFERINGS PAGE — Steps
+   20. OFFERINGS PAGE â€” Steps
 ----------------------------------------- */
 .triggers-section { margin-bottom: 72px; }
 
@@ -1015,7 +1018,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .detail-item::before {
-  content: '—';
+  content: 'â€”';
   position: absolute;
   left: 0;
   color: var(--amber);
@@ -1050,7 +1053,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .wyg-item::before {
-  content: '✓';
+  content: 'âœ“';
   position: absolute;
   left: 0;
   color: var(--amber);

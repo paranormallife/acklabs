@@ -245,7 +245,7 @@
 }
 
 .clients-label {
-    font-family: var(--heading);
+    font-family: var(--body);
     text-align: center;
     text-transform: uppercase;
 }
