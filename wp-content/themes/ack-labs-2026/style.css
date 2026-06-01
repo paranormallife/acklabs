@@ -1302,6 +1302,26 @@ textarea { resize: vertical; min-height: 140px; line-height: 1.7; }
     border-top: 1px solid var(--border);
 }
 
+.asw .wp-block-image img {
+    border-radius: 1rem;
+}
+
+.wp-block-embed.is-type-video.wp-embed-aspect-16-9 .wp-block-embed__wrapper {
+    aspect-ratio: 16 / 9;
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.wp-block-embed.is-type-video.wp-embed-aspect-16-9 .wp-block-embed__wrapper iframe {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
 @media (min-width: 800px) {
 
   /* Nav */
