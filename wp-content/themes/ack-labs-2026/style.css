@@ -86,7 +86,7 @@ p strong { color: var(--cream); font-weight: 400; }
 a { color: inherit; text-decoration: none; }
 
 /* -----------------------------------------
-   4. NAVIGATION â€” Mobile-first
+   4. NAVIGATION Ã¢â‚¬â€ Mobile-first
 ----------------------------------------- */
 .site-nav {
   position: fixed;
@@ -120,7 +120,7 @@ a { color: inherit; text-decoration: none; }
   text-transform: uppercase;
 }
 
-/* Hamburger toggle â€” visible on mobile */
+/* Hamburger toggle Ã¢â‚¬â€ visible on mobile */
 .nav-toggle {
   display: flex;
   flex-direction: column;
@@ -146,7 +146,7 @@ a { color: inherit; text-decoration: none; }
 .site-nav.nav-open .hamburger-bar:nth-child(2) { opacity: 0; }
 .site-nav.nav-open .hamburger-bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* Mobile nav menu â€” hidden by default, revealed via .nav-open */
+/* Mobile nav menu Ã¢â‚¬â€ hidden by default, revealed via .nav-open */
 .nav-links {
   display: none;
   position: absolute;
@@ -206,7 +206,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .nav-links li.menu-item-has-children > a::after {
-  content: 'â€º';
+  content: 'Ã¢â‚¬Âº';
   font-size: 16px;
   color: var(--amber);
   opacity: 0.7;
@@ -740,6 +740,23 @@ a { color: inherit; text-decoration: none; }
   gap: 12px;
   text-align: center;
   margin-top: 60px;
+  margin-left: 50%;
+  translate: -50% 0;
+  width: 100vw;
+}
+
+.site-footer .widget_block {
+  margin: 0 auto;
+}
+
+.site-footer .widget_block .wp-block-columns {
+  max-width: 1080px;
+  padding: 0;
+  width: calc(100vw - 2rem);
+}
+
+.site-footer p {
+  font-size: 0.85rem;
 }
 
 .footer-logo { display: flex; align-items: center; gap: 8px; }
@@ -783,7 +800,7 @@ a { color: inherit; text-decoration: none; }
 .page-intro strong { color: var(--cream); font-weight: 400; }
 
 /* -----------------------------------------
-   18. ABOUT PAGE â€” Meet Section
+   18. ABOUT PAGE Ã¢â‚¬â€ Meet Section
 ----------------------------------------- */
 .meet-section {
   display: grid;
@@ -881,7 +898,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* -----------------------------------------
-   20. OFFERINGS PAGE â€” Steps
+   20. OFFERINGS PAGE Ã¢â‚¬â€ Steps
 ----------------------------------------- */
 .triggers-section { margin-bottom: 72px; }
 
@@ -1018,7 +1035,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .detail-item::before {
-  content: 'â€”';
+  content: 'Ã¢â‚¬â€';
   position: absolute;
   left: 0;
   color: var(--amber);
@@ -1053,7 +1070,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .wyg-item::before {
-  content: 'âœ“';
+  content: 'Ã¢Å“â€œ';
   position: absolute;
   left: 0;
   color: var(--amber);
