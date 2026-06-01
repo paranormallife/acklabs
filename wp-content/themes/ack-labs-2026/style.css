@@ -1297,10 +1297,12 @@ textarea { resize: vertical; min-height: 140px; line-height: 1.7; }
 .animate-4 { opacity: 0; animation: fadeUp 0.7s 0.4s ease forwards; }
 .animate-5 { opacity: 0; animation: fadeUp 0.7s 0.5s ease forwards; }
 
-/* -----------------------------------------
-   26. DESKTOP — min-width: 640px
------------------------------------------ */
-@media (min-width: 640px) {
+.asw .wp-block-separator {
+    margin: 3rem auto;
+    border-top: 1px solid var(--border);
+}
+
+@media (min-width: 800px) {
 
   /* Nav */
   .site-nav { padding: 18px 40px; }

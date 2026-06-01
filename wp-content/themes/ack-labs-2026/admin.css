@@ -219,3 +219,8 @@
   color: var(--muted);
   line-height: 1.6;
 }
+
+.wp-block-separator {
+    margin: 3rem auto;
+    border-top: 1px solid var(--border);
+}
