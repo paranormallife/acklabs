@@ -1,0 +1,490 @@
+/*
+ * Ack LBA — Frontend styles
+ * All rules scoped under .lba-wrap to avoid theme conflicts.
+ * Section dot colors are applied via inline style from config.
+ */
+
+/* ---- Design tokens ---- */
+.lba-wrap {
+    --lba-navy:        #0f1f38;
+    --lba-slate:       #1c3254;
+    --lba-amber:       #e8a045;
+    --lba-amber-light: #f2c07a;
+    --lba-cream:       #f8f4ee;
+    --lba-muted:       #7a8fa6;
+    --lba-border:      rgba(255, 255, 255, 0.08);
+    --lba-card-bg:     rgba(255, 255, 255, 0.04);
+}
+
+/* ---- Wrap ---- */
+.lba-wrap {
+    background: var(--lba-navy);
+    background-image:
+        radial-gradient(ellipse at 20% 0%, rgba(232, 160, 69, 0.06) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 100%, rgba(28, 50, 84, 0.8) 0%, transparent 60%);
+    color: var(--lba-cream);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    min-height: 60vh;
+    border-radius: 12px;
+}
+
+.lba-wrap .lba-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+}
+
+/* ---- Typography ---- */
+.lba-wrap .lba-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(26px, 5vw, 40px);
+    line-height: 1.15;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+
+.lba-wrap .lba-title em {
+    font-style: italic;
+    color: var(--lba-amber-light);
+}
+
+.lba-wrap .lba-intro {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--lba-muted);
+    max-width: 560px;
+    margin-bottom: 36px;
+}
+
+.lba-wrap .lba-intro strong {
+    color: var(--lba-cream);
+    font-weight: 500;
+}
+
+/* ---- Progress bar ---- */
+.lba-wrap .lba-progress-bar {
+    height: 2px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 2px;
+    margin-bottom: 48px;
+}
+
+.lba-wrap .lba-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--lba-amber), var(--lba-amber-light));
+    border-radius: 2px;
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
+.lba-wrap .lba-progress-label {
+    font-size: 12px;
+    color: var(--lba-muted);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-top: 8px;
+}
+
+.lba-wrap .lba-progress-label .lba-answered-count {
+    font-weight: 500;
+    color: var(--lba-amber);
+}
+
+/* ---- Dimension sections ---- */
+.lba-wrap .lba-dimension {
+    margin-bottom: 48px;
+    opacity: 0;
+    animation: lbaFadeUp 0.6s ease forwards;
+}
+
+.lba-wrap .lba-dimension-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--lba-border);
+}
+
+.lba-wrap .lba-dimension-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    /* color set via inline style from config */
+}
+
+.lba-wrap .lba-dimension-label {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--lba-muted);
+}
+
+/* ---- Question items ---- */
+.lba-wrap .lba-item {
+    margin-bottom: 24px;
+    background: var(--lba-card-bg);
+    border: 1px solid var(--lba-border);
+    border-radius: 10px;
+    padding: 20px 22px;
+    transition: border-color 0.2s;
+}
+
+.lba-wrap .lba-item:hover {
+    border-color: rgba(255, 255, 255, 0.14);
+}
+
+.lba-wrap .lba-item.lba-answered {
+    border-color: rgba(232, 160, 69, 0.2);
+}
+
+.lba-wrap .lba-item-num {
+    font-size: 11px;
+    color: var(--lba-muted);
+    letter-spacing: 0.06em;
+    margin-bottom: 6px;
+}
+
+.lba-wrap .lba-item-text {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    color: var(--lba-cream);
+}
+
+/* ---- Scale buttons ---- */
+.lba-wrap .lba-scale {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.lba-wrap .lba-scale-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6px;
+    font-size: 11px;
+    color: var(--lba-muted);
+}
+
+.lba-wrap .lba-scale-btn {
+    flex: 1;
+    aspect-ratio: 1;
+    max-width: 48px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 6px;
+    background: transparent;
+    color: var(--lba-muted);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.lba-wrap .lba-scale-btn:hover {
+    border-color: var(--lba-amber);
+    color: var(--lba-amber);
+    background: rgba(232, 160, 69, 0.06);
+}
+
+.lba-wrap .lba-scale-btn.lba-selected {
+    background: var(--lba-amber);
+    border-color: var(--lba-amber);
+    color: var(--lba-navy);
+    font-weight: 500;
+}
+
+/* ---- Submit area ---- */
+.lba-wrap .lba-submit-area {
+    margin-top: 48px;
+    text-align: center;
+}
+
+.lba-wrap .lba-submit-btn {
+    background: var(--lba-amber);
+    color: var(--lba-navy);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 16px 40px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    letter-spacing: 0.02em;
+}
+
+.lba-wrap .lba-submit-btn:hover:not(:disabled) {
+    background: var(--lba-amber-light);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(232, 160, 69, 0.25);
+}
+
+.lba-wrap .lba-submit-btn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.lba-wrap .lba-submit-hint {
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--lba-muted);
+}
+
+/* ================================================================
+   RESULTS VIEW
+================================================================ */
+.lba-wrap #lba-results-view {
+    display: none;
+    opacity: 0;
+    animation: lbaFadeUp 0.7s ease forwards;
+}
+
+.lba-wrap #lba-results-view.lba-visible {
+    display: block;
+}
+
+.lba-wrap .lba-results-header {
+    margin-bottom: 40px;
+}
+
+.lba-wrap .lba-results-header h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.lba-wrap .lba-results-header p {
+    color: var(--lba-muted);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* ---- Score blocks ---- */
+.lba-wrap .lba-scores {
+    margin-bottom: 40px;
+}
+
+.lba-wrap .lba-score-block {
+    margin-bottom: 24px;
+}
+
+.lba-wrap .lba-score-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+}
+
+.lba-wrap .lba-score-name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--lba-muted);
+    width: 110px;
+    flex-shrink: 0;
+}
+
+.lba-wrap .lba-score-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.lba-wrap .lba-score-track {
+    flex: 1;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.lba-wrap .lba-score-fill {
+    height: 100%;
+    border-radius: 3px;
+    width: 0%;
+    transition: width 1s cubic-bezier(0.16, 1, 0.3, 1);
+    /* background set via inline style from config color */
+}
+
+.lba-wrap .lba-score-val {
+    font-size: 15px;
+    font-weight: 500;
+    width: 28px;
+    text-align: right;
+    color: var(--lba-cream);
+}
+
+.lba-wrap .lba-score-detail {
+    padding-left: 126px; /* 110px name + 8px gap + 8px dot */
+}
+
+.lba-wrap .lba-tier-label {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--lba-amber);
+    margin-bottom: 4px;
+}
+
+.lba-wrap .lba-diagnosis {
+    font-size: 13px;
+    color: var(--lba-muted);
+    line-height: 1.6;
+}
+
+/* ---- Pattern cards ---- */
+.lba-wrap .lba-patterns {
+    margin-bottom: 40px;
+}
+
+.lba-wrap .lba-patterns-heading {
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.lba-wrap .lba-pattern-card {
+    border: 1px solid rgba(232, 160, 69, 0.25);
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin-bottom: 14px;
+    background: rgba(232, 160, 69, 0.04);
+    position: relative;
+    overflow: hidden;
+}
+
+.lba-wrap .lba-pattern-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--lba-amber);
+}
+
+.lba-wrap .lba-pattern-card h4 {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: var(--lba-amber-light);
+    letter-spacing: 0.02em;
+}
+
+.lba-wrap .lba-pattern-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--lba-muted);
+}
+
+/* ---- CTA block ---- */
+.lba-wrap .lba-cta-block {
+    border: 1px solid var(--lba-border);
+    border-radius: 14px;
+    padding: 36px;
+    text-align: center;
+    background: var(--lba-card-bg);
+    position: relative;
+    overflow: hidden;
+}
+
+.lba-wrap .lba-cta-block::after {
+    content: '';
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(232, 160, 69, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.lba-wrap .lba-cta-block h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.lba-wrap .lba-cta-block p {
+    color: var(--lba-muted);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 28px;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lba-wrap .lba-cta-btn {
+    display: inline-block;
+    background: var(--lba-amber);
+    color: var(--lba-navy);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.lba-wrap .lba-cta-btn:hover {
+    background: var(--lba-amber-light);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(232, 160, 69, 0.25);
+}
+
+.lba-wrap .lba-cta-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.lba-wrap .lba-cta-links a {
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(232, 160, 69, 0.3);
+    padding-bottom: 2px;
+    transition: all 0.2s;
+    color: var(--lba-amber);
+}
+
+.lba-wrap .lba-cta-links a.lba-link-muted {
+    color: var(--lba-muted);
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.lba-wrap .lba-cta-links a:hover {
+    opacity: 0.8;
+}
+
+/* ---- Animation ---- */
+@keyframes lbaFadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 480px) {
+    .lba-wrap .lba-scale-btn { font-size: 13px; }
+    .lba-wrap .lba-score-name { width: 80px; font-size: 11px; }
+    .lba-wrap .lba-score-detail { padding-left: 96px; }
+    .lba-wrap .lba-inner { padding: 36px 16px 60px; }
+}
