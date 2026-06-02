@@ -51,7 +51,7 @@ add_action( 'admin_post_ack_lba_save', function () {
     }
     check_admin_referer( 'ack_lba_save', 'ack_lba_nonce' );
 
-    $raw      = isset( $_POST['ack_lba'] ) ? $_POST['ack_lba'] : [];
+    $raw      = isset( $_POST['ack_lba'] ) ? wp_unslash( $_POST['ack_lba'] ) : [];
     $settings = ack_lba_sanitize( $raw );
 
     update_option( ACK_LBA_OPTION, $settings );
