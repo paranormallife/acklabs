@@ -1,5 +1,5 @@
 /*
- * Ack LBA — Frontend styles
+ * Ack LBA â€” Frontend styles
  * All rules scoped under .lba-wrap to avoid theme conflicts.
  * Section dot colors are applied via inline style from config.
  */
@@ -32,7 +32,6 @@
 .lba-wrap .lba-inner {
     max-width: 720px;
     margin: 0 auto;
-    padding: 56px 24px 80px;
 }
 
 /* ---- Typography ---- */
@@ -167,6 +166,7 @@
     margin-top: 6px;
     font-size: 11px;
     color: var(--lba-muted);
+    max-width: 17rem;
 }
 
 .lba-wrap .lba-scale-btn {
