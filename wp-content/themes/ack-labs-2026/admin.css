@@ -53,8 +53,7 @@
 .editor-styles-wrapper h4 { font-size: clamp(16px, 2vw, 20px); }
 
 .editor-styles-wrapper h1 em,
-.editor-styles-wrapper h2 em,
-.editor-styles-wrapper h3 em {
+.editor-styles-wrapper h2 em {
 	font-style: italic;
 	color: #f2c07a;
 }
@@ -249,3 +248,17 @@
     text-align: center;
     text-transform: uppercase;
 }
+
+.method-step-pill {
+  font-family: var(--heading);
+  font-size: 15px;
+  color: var(--cream);
+  padding: 4px 14px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--card-bg);
+}
+
+.method-step-pill.active-pill { border-color: var(--amber); color: var(--amber); }
+.method-arrow { color: var(--muted); font-size: 14px; }
+.method-sub { font-size: 15px; color: var(--muted); line-height: 1.7; max-width: 580px; }
