@@ -32,6 +32,43 @@ function acklabs_setup() {
 	register_nav_menus( [
 		'main_menu' => __( 'Main Menu', 'acklabs' ),
 	] );
+
+	// Editor color palette — mirrors CSS design tokens in style.css
+	add_theme_support( 'editor-color-palette', [
+		[
+			'name'  => __( 'Navy', 'acklabs' ),
+			'slug'  => 'navy',
+			'color' => '#0f1f38',
+		],
+		[
+			'name'  => __( 'Slate', 'acklabs' ),
+			'slug'  => 'slate',
+			'color' => '#1c3254',
+		],
+		[
+			'name'  => __( 'Amber', 'acklabs' ),
+			'slug'  => 'amber',
+			'color' => '#e8a045',
+		],
+		[
+			'name'  => __( 'Amber Light', 'acklabs' ),
+			'slug'  => 'amber-light',
+			'color' => '#f2c07a',
+		],
+		[
+			'name'  => __( 'Cream', 'acklabs' ),
+			'slug'  => 'cream',
+			'color' => '#f8f4ee',
+		],
+		[
+			'name'  => __( 'Muted', 'acklabs' ),
+			'slug'  => 'muted',
+			'color' => '#7a8fa6',
+		],
+	] );
+
+	// Disable the default core color palette so only theme colors appear
+	add_theme_support( 'disable-custom-colors' );
 }
 add_action( 'after_setup_theme', 'acklabs_setup' );
 
