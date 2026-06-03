@@ -116,6 +116,7 @@
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--amber);
+  white-space: nowrap;
 }
 
 .bridge {
