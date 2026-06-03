@@ -1651,9 +1651,6 @@ textarea { resize: vertical; min-height: 140px; line-height: 1.7; }
   .meet-section { grid-template-columns: 220px 1fr; gap: 48px; }
   .meet-photo { position: sticky; top: 100px; width: 100%; }
 
-  /* History */
-  .history-photo-block { float: right; margin: 0 0 24px 40px; width: 220px; }
-
   /* Offerings steps */
   .step-body { grid-template-columns: 1fr 1fr; }
 
