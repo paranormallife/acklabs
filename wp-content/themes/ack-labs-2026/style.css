@@ -73,7 +73,7 @@ h2 { font-size: clamp(24px, 3vw, 36px); }
 h3 { font-size: clamp(18px, 2.5vw, 24px); }
 h4 { font-size: clamp(16px, 2vw, 20px); }
 
-h1 em, h2 em, h3 em { font-style: italic; color: var(--amber-light); }
+h1 em { font-style: italic; color: var(--amber-light); }
 
 p {
   font-size: 15px;
