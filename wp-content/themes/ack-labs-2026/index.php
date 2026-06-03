@@ -37,6 +37,7 @@
 					$page_intro = $content ? $content : '';
 				}
 				?>
+				<p class="page-eyebrow"><?php esc_html_e( 'The Ack Labs Blog', 'acklabs' ); ?></p>
 				<?php if ( $page_intro ) : ?>
 					<div class="page-intro"><?php echo wp_kses_post( $page_intro ); ?></div>
 				<?php endif; ?>
