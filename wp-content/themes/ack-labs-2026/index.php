@@ -33,9 +33,9 @@
 				$page_intro    = '';
 				if ( $posts_page_id ) {
 					$posts_page = get_post( $posts_page_id );
-					if ( $posts_page ) {
-						$page_intro = get_the_content();
-					}
+					$title	  = get_the_title( $posts_page_id );
+					$content  = apply_filters( 'the_content', $posts_page->post_content );
+					$page_intro = '<h1>' . wp_kses( $title, [ 'em' => [], 'strong' => [], 'br' => [] ] ) . '</h1>' . $content;
 				}
 				?>
 				<p class="page-eyebrow"><?php esc_html_e( 'The Ack Labs Blog', 'acklabs' ); ?></p>
