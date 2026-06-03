@@ -33,7 +33,7 @@
 				$page_intro    = '';
 				if ( $posts_page_id ) {
 					$posts_page = get_post( $posts_page_id );
-					$content  = apply_filters( 'the_content', $posts_page->post_content );
+					$content  = get_the_content( null, false, $posts_page );
 					$page_intro = $content ? $content : '';
 				}
 				?>
