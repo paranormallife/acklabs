@@ -262,3 +262,9 @@
 .method-step-pill.active-pill { border-color: var(--amber); color: var(--amber); }
 .method-arrow { color: var(--muted); font-size: 14px; }
 .method-sub { font-size: 15px; color: var(--muted); line-height: 1.7; max-width: 580px; }
+
+h1.wp-block.wp-block-post-title {
+    color: var(--muted);
+    font: normal 1.5rem var(--body);
+    text-transform: uppercase;
+}
