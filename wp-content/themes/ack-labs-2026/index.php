@@ -13,11 +13,79 @@
 <?php elseif ( is_singular() ) : ?>
 
 	<?php while ( have_posts() ) : the_post(); ?>
-		<div class="page">
-			<div class="entry-content">
-				<?php the_content(); ?>
+		<?php if ( is_single() ) : ?>
+
+			<div class="page single-post-page">
+				<div class="single-post-layout">
+
+					<!-- Main content -->
+					<article class="single-post-body">
+						<div class="single-post-header animate-1">
+							<?php
+							$categories = get_the_category();
+							if ( $categories ) :
+							?>
+								<div class="post-meta" style="margin-bottom:20px;">
+									<span class="post-cat"><?php echo esc_html( $categories[0]->name ); ?></span>
+									<span class="post-date"><?php echo esc_html( get_the_date( 'F j, Y' ) ); ?></span>
+								</div>
+							<?php endif; ?>
+							<h1 class="single-post-title"><?php the_title(); ?></h1>
+						</div>
+						<div class="entry-content animate-2">
+							<?php the_content(); ?>
+						</div>
+					</article>
+
+					<!-- Sidebar -->
+					<aside class="single-post-sidebar animate-3">
+						<?php
+						$blog_page_id = (int) get_option( 'page_for_posts' );
+						$blog_url     = $blog_page_id ? get_permalink( $blog_page_id ) : home_url( '/' );
+						?>
+						<a href="<?php echo esc_url( $blog_url ); ?>" class="sidebar-back-link">
+							&larr; <?php esc_html_e( 'All posts', 'acklabs' ); ?>
+						</a>
+
+						<h2 class="sidebar-heading"><?php esc_html_e( 'Recent posts', 'acklabs' ); ?></h2>
+
+						<?php
+						$recent = new WP_Query( [
+							'post_type'           => 'post',
+							'posts_per_page'      => 6,
+							'post__not_in'        => [ get_the_ID() ],
+							'ignore_sticky_posts' => true,
+							'no_found_rows'       => true,
+						] );
+						if ( $recent->have_posts() ) :
+							while ( $recent->have_posts() ) : $recent->the_post();
+						?>
+							<a class="sidebar-post" href="<?php the_permalink(); ?>">
+								<div class="sidebar-post-date"><?php echo esc_html( get_the_date( 'F Y' ) ); ?></div>
+								<div class="sidebar-post-title"><?php the_title(); ?></div>
+								<?php if ( has_excerpt() ) : ?>
+									<div class="sidebar-post-excerpt"><?php echo esc_html( wp_trim_words( get_the_excerpt(), 18 ) ); ?></div>
+								<?php endif; ?>
+							</a>
+						<?php
+							endwhile;
+							wp_reset_postdata();
+						endif;
+						?>
+					</aside>
+
+				</div><!-- .single-post-layout -->
+			</div><!-- .page -->
+
+		<?php else : ?>
+
+			<div class="page">
+				<div class="entry-content">
+					<?php the_content(); ?>
+				</div>
 			</div>
-		</div>
+
+		<?php endif; ?>
 	<?php endwhile; ?>
 
 <?php elseif ( is_home() || is_archive() || is_search() ) : ?>
