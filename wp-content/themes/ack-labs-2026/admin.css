@@ -268,3 +268,37 @@ h1.wp-block.wp-block-post-title {
     font: normal 1.5rem var(--body);
     text-transform: uppercase;
 }
+
+.stats-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2px;
+  margin: 36px 0;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.stat {
+  padding: 20px;
+  background: var(--card-bg);
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.stat:last-child { border-bottom: none; }
+
+.stat-number {
+  font-family: var(--heading);
+  font-size: 28px;
+  color: var(--amber-light);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
