@@ -34,17 +34,14 @@
 				if ( $posts_page_id ) {
 					$posts_page = get_post( $posts_page_id );
 					if ( $posts_page ) {
-						$page_intro = $posts_page->post_excerpt;
-						if ( ! $page_intro && $posts_page->post_content ) {
-							$page_intro = wp_trim_words( wp_strip_all_tags( $posts_page->post_content ), 40 );
-						}
+						$page_intro = get_the_content();
 					}
 				}
 				?>
 				<p class="page-eyebrow"><?php esc_html_e( 'The Ack Labs Blog', 'acklabs' ); ?></p>
 				<h1 class="page-title"><?php echo wp_kses( $page_title, [ 'em' => [], 'strong' => [], 'br' => [] ] ); ?></h1>
 				<?php if ( $page_intro ) : ?>
-					<p class="page-intro"><?php echo esc_html( $page_intro ); ?></p>
+					<div class="page-intro"><?php echo wp_kses( $page_intro, [ 'p' => [], 'em' => [], 'strong' => [], 'br' => [] ] ); ?></div>
 				<?php endif; ?>
 			<?php elseif ( is_category() ) : ?>
 				<p class="page-eyebrow"><?php esc_html_e( 'The Ack Labs Blog', 'acklabs' ); ?></p>
